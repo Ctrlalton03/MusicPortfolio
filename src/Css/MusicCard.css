@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.MusicCardContainer{
+    display: flex;
+    background-color: white;
+    border-radius: 8px  ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    height: 100%;
+}
+
+.MusicCardContainer img{
+    margin: 10px;
+    width: 80%;
+    height: 40%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.MusicCardContainer h2{
+    font-family: 'Oswald', serif;
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+    margin-top: 1rem;
+}
+
+.MusicCardContainer h3{
+    font-family: 'Oswald', serif;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+.DescriptionComponent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border: 1px solid red;
+}
+
+
+.DescriptionComponent p{
+    font-family: 'Oswald', serif;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+}
+
+
+.PlaybackContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.PlaybackContainer button{
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.PlaybackContainer button:hover{
+    transition: all 0.5s ease-in-out;
+    background-color: #000000;
+    color: white;
+}
+
+.PlaybackControls{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.NavigationButtons{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.NavigationButtons button{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #171717;
+    border: 1px solid white;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 10px ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+
+
+.volumeContainer_Descriptonbtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.VolumeContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.volumeContainer_Descriptonbtn button{
+    font-family: 'Oswald', serif;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.volumeContainer_Descriptonbtn button:hover{
+    transition: all 0.5s ease-in-out;
+    background-color: #000000;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+@media (min-width: 768px) {
+    .MusicCardContainer img {
+        max-width: 40%;
+    }
+
+    
+}
