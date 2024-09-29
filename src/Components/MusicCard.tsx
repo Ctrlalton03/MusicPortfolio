@@ -1,26 +1,43 @@
-import React, {useState, useRef, useEffect } from 'react';
+import {useState, useRef, useEffect } from 'react';
 import { Play, Pause, Volume2,  } from 'lucide-react';
 import '../Css/MusicCard.css';
 
-const formatTime = (time) => {
+const formatTime = (time: number): string => {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds.toString().padStart(2, '0')}`;
 };
 
-const MusicPlayerCard = ({ title, artist, albumArt, audioSrc, description, onNext, onPrev }) => {
+interface MusicPlayerCardProps {
+    title: string;
+    artist: string;
+    albumArt: string;
+    audioSrc: string;
+    description: string;
+    onNext: () => void;
+    onPrev: () => void;
+}
+
+const MusicPlayerCard: React.FC<MusicPlayerCardProps> = ({ title, artist, albumArt, audioSrc, description, onNext, onPrev }) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
     const [volume, setVolume] = useState(1);
     const [showDescription, setShowDescription] = useState(false);
-    const audioRef = useRef(null);
+    const audioRef = useRef<HTMLAudioElement>(null);
+
 
     useEffect(() => {
         const audio = audioRef.current;
-        audio.addEventListener('loadedmetadata', () => setDuration(audio.duration));
-        audio.addEventListener('timeupdate', () => setCurrentTime(audio.currentTime));
-        audio.addEventListener('ended', () => setIsPlaying(false));
+        if (!audio) return;
+
+        const handleLoadedMetadata = () => setDuration(audio.duration);
+        const handleTimeUpdate = () => setCurrentTime(audio.currentTime);
+        const handleEnded = () => setIsPlaying(false);
+
+        audio.addEventListener('loadedmetadata', handleLoadedMetadata);
+        audio.addEventListener('timeupdate', handleTimeUpdate);
+        audio.addEventListener('ended', handleEnded);
         
         return () => {
             audio.removeEventListener('loadedmetadata', () => setDuration(audio.duration));
@@ -31,6 +48,8 @@ const MusicPlayerCard = ({ title, artist, albumArt, audioSrc, description, onNex
 
     const handlePlayPause = () => {
         const audio = audioRef.current;
+        if (!audio) return;
+        
         if (isPlaying) {
             audio.pause();
         } else {
@@ -39,16 +58,18 @@ const MusicPlayerCard = ({ title, artist, albumArt, audioSrc, description, onNex
         setIsPlaying(!isPlaying);
     };
 
-    const handleSeek = (e) => {
+    const handleSeek = (event: React.ChangeEvent<HTMLInputElement>) => {
         const audio = audioRef.current;
-        const newTime = (e.target.value / 100) * duration;
+        if (!audio) return;
+        const newTime = (event.target.valueAsNumber / 100) * duration;
         audio.currentTime = newTime;
         setCurrentTime(newTime);
     }
 
-    const handleVolumeChange = (e) => {
+    const handleVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const audio = audioRef.current;
-        const newVolume = e.target.value;
+        if (!audio) return;
+        const newVolume = event.target.valueAsNumber / 100;
         audio.volume = newVolume;
         setVolume(newVolume);
     };

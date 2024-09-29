@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import {useState} from 'react';
 import MusicPlayerCard from '../Components/MusicCard';
 import '../Css/home.css';
 
@@ -7,21 +6,21 @@ const HomePage = () => {
     const songs = [
         {
             title: "Song 1",
-            artist: "Artist 1",
+            artist: "Joel L.",
             albumArt: "https://via.placeholder.com/300x300",
             audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
             description: "Description for Song 1"
         },
         {
             title: "Song 2",
-            artist: "Artist 2",
+            artist: "Joel L.",
             albumArt: "https://via.placeholder.com/300x300",
             audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
             description: "Description for Song 2"
         },
         {
             title: "Song 3",
-            artist: "Artist 3",
+            artist: "Joel L.",
             albumArt: "https://via.placeholder.com/300x300",
             audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
             description: "Description for Song 3"
@@ -50,7 +49,7 @@ const HomePage = () => {
             <h1>Experience Unique Beats and Rhythms by Joel L.</h1>
             <section className='musicContainer'>
                 <div className='MusicPlayerContainer'>
-                    <MusicPlayerCard className='MusicPlayerCard'
+                    <MusicPlayerCard
                         
                         title={currentSong.title}
                         artist={currentSong.artist}
