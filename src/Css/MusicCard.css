@@ -25,6 +25,24 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.MusicCard_img_Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.Card_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 .MusicCardContainer h2{
     font-family: 'Oswald', serif;
     font-size: 3rem;
@@ -158,10 +176,36 @@
 
 
 
+
 @media (min-width: 768px) {
-    .MusicCardContainer img {
-        max-width: 40%;
+    .MusicCardContainer{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem;
     }
 
+    .MusicCardContainer img {
+        max-width: 60%;
+    }
+
+    .MusicCard_img_Container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
     
+    .Card_info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
 }

@@ -26,13 +26,10 @@ const HomePage = () => {
             description: "Description for Song 3"
         }
     ];
-
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
-
     const handleNext = () => {
         setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length); // Loop back to the first song after the last
     };
-
     const handlePrev = () => {
         setCurrentSongIndex((prevIndex) =>
             prevIndex === 0 ? songs.length - 1 : prevIndex - 1
@@ -41,7 +38,11 @@ const HomePage = () => {
 
     const currentSong = songs[currentSongIndex];
     
+    const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
 
+    const handleDescriptionToggle = () => {
+        setIsDescriptionOpen(prev => !prev);
+    }
 
     return (
 
@@ -50,25 +51,26 @@ const HomePage = () => {
             <section className='musicContainer'>
                 <div className='MusicPlayerContainer'>
                     <MusicPlayerCard
-                        
                         title={currentSong.title}
                         artist={currentSong.artist}
                         albumArt={currentSong.albumArt}
                         audioSrc={currentSong.audioSrc}
                         description={currentSong.description}
+                        showDescription={isDescriptionOpen}
+                        onToggleDescription={handleDescriptionToggle}
                         onNext={handleNext}
                         onPrev={handlePrev}
-                        
                     />
                 </div>
-                <div className='PlaylistContainer'>
-                    
-                </div>
-                
+                {isDescriptionOpen && (
+                    <div className="DescriptionPreview">
+                        <h2 className="text-lg font-bold">{currentSong.title}</h2>
+                        <p>{currentSong.description}</p>
+                    </div>
+                )}
                 
             </section>
         </div>
-    )
-}
-
+    );
+};
 export default HomePage;
