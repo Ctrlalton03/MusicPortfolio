@@ -9,7 +9,7 @@ const HomePage = () => {
             artist: "Joel L.",
             albumArt: "https://via.placeholder.com/300x300",
             audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-            description: "Description for Song 1"
+            description: "Description for Song 1, Welcome to my music page! This is just PlaceHolder Text for now."
         },
         {
             title: "Song 2",
@@ -62,12 +62,15 @@ const HomePage = () => {
                         onPrev={handlePrev}
                     />
                 </div>
-                {isDescriptionOpen && (
-                    <div className="DescriptionPreview">
-                        <h2 className="text-lg font-bold">{currentSong.title}</h2>
-                        <p>{currentSong.description}</p>
-                    </div>
-                )}
+
+                <div className="description_container">
+                    {isDescriptionOpen && (
+                        <div className="DescriptionPreview">
+                            <h2 className="text-lg font-bold">{currentSong.title}</h2>
+                            <p>{currentSong.description}</p>
+                        </div>
+                    )}
+                </div>
                 
             </section>
         </div>

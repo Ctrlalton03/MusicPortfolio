@@ -78,7 +78,7 @@ const MusicPlayerCard: React.FC<MusicPlayerCardProps> = ({ title, artist, albumA
 
     return (
         <>
-            <div className='MusicCardContainer'>
+        <div className='MusicCardContainer'>
             <div className='MusicCard_img_Container'>
                 <img src={albumArt} alt={`${title} by ${artist} `}></img>
                 <div className="NavigationButtons">
@@ -121,7 +121,7 @@ const MusicPlayerCard: React.FC<MusicPlayerCardProps> = ({ title, artist, albumA
                             />
                     </div>
                         
-                    <button onClick={onToggleDescription} className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    <button onClick={onToggleDescription} className="DescriptionBtn">
                         {showDescription ? "Hide Description" : "View Description"}
                     </button>
                 </div>
