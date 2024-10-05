@@ -23,7 +23,7 @@ const Header = () => {
           <span className="line"></span>
         </div>
         <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
-          <li><Link to="/projects" onClick={toggleMenu}>Projects</Link></li>
+          <li><Link to="/projects" onClick={toggleMenu}>Music</Link></li>
           <li><Link to="/news" onClick={toggleMenu}>News/Events</Link></li>
           <li><Link to="/AboutMe" onClick={toggleMenu}>About Me</Link></li>
           <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>

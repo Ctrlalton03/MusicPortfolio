@@ -5,10 +5,10 @@ import '../Css/home.css';
 const HomePage = () => {
     const songs = [
         {
-            title: "Song 1",
-            artist: "Joel L.",
-            albumArt: "https://via.placeholder.com/300x300",
-            audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+            title: "In Between Things",
+            artist: "Jawaezy",
+            albumArt: "../Images/Song_1.jpg",
+            audioSrc: "../Songs/Inbetweenthingy.wav",
             description: "Description for Song 1, Welcome to my music page! This is just PlaceHolder Text for now."
         },
         {
@@ -49,7 +49,7 @@ const HomePage = () => {
         <div className='HomepageContainer'>
             <h1>Experience Unique Beats and Rhythms by Joel L.</h1>
             <section className='musicContainer'>
-                <div className='MusicPlayerContainer'>
+                <div className= {`MusicPlayerContainer ${isDescriptionOpen ? 'shifted' : ''}`}>
                     <MusicPlayerCard
                         title={currentSong.title}
                         artist={currentSong.artist}
@@ -63,7 +63,7 @@ const HomePage = () => {
                     />
                 </div>
 
-                <div className="description_container">
+                <div className={`description_container ${isDescriptionOpen ? 'open' : ''}`}>
                     {isDescriptionOpen && (
                         <div className="DescriptionPreview">
                             <h2 className="text-lg font-bold">{currentSong.title}</h2>

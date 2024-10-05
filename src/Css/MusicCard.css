@@ -45,6 +45,7 @@
 }
 
 .MusicCardContainer h2{
+    text-align: center;
     font-family: 'Oswald', serif;
     font-size: 3rem;
     color: rgb(0, 0, 0);
@@ -53,7 +54,7 @@
 
 .MusicCardContainer h3{
     font-family: 'Oswald', serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: rgb(0, 0, 0);
 }
 
