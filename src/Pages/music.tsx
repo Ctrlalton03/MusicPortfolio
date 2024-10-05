@@ -18,7 +18,6 @@ const musicData = [
 
 const MusicPage = () => {
 
-    const [songs, setSongs] = useState([])
 
     const [searchTerm, setSearchTerm] = useState('');
     const [genre, setGenre] = useState('');
