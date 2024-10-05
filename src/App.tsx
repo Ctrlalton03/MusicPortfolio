@@ -5,6 +5,7 @@ import HomePage from './Pages/Homepage';
 import News from './Pages/news';
 import AboutMe from './Pages/AboutMe';
 import ContactPage from './Pages/contact';
+import MusicPage from './Pages/music';
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
           <Route path="/" element={<HomePage />} /> 
           <Route path="/news" element={<News />} />
           <Route path="/AboutMe" element={<AboutMe />} /> 
-          <Route path="/contact" element={<ContactPage />} />    
+          <Route path="/contact" element={<ContactPage />} />   
+          <Route path="/music" element={<MusicPage />} /> 
         </Routes>
       </Router>
       

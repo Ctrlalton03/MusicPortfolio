@@ -9,19 +9,19 @@ const ContactPage = () => {
                 <div className='ContactforminsideContainer'>
                     <div className='ContactFormInput'>
                         <label htmlFor="name">First Name:</label>
-                        <input type="text" id="name" name="name" />
+                        <input type="text" id="name" name="name" required/>
                     </div>
                     <div className='ContactFormInput'>
                         <label htmlFor="name">Last Name:</label>
-                        <input type="text" id="name" name="name" />
+                        <input type="text" id="name" name="name" required/>
                     </div>
                     <div className='ContactFormInput'>
                         <label htmlFor="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone" />
+                        <input type="tel" id="phone" name="phone" required/>
                     </div>
                     <div className='ContactFormInput'>
                         <label htmlFor="email">Email:</label>
-                        <input type="email" id="email" name="email" />
+                        <input type="email" id="email" name="email" required/>
                     </div>
                 </div>
                 <div className='ContactFormInput_Message'>
