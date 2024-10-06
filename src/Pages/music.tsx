@@ -2,11 +2,11 @@ import '../Css/MusicPage.css';
 import {useState} from 'react';
 
 const musicData = [
-{id: 1, title: "Everything", artist: "Joel L.", albumArt: "../Images/Song_1.jpg", genre: 'Rock'},
+{id: 1, title: "In Between Things", artist: "Joel L.", albumArt: "../Images/Song_1.jpg", genre: 'Rock'},
 {id: 2, title: "Life's Feast", artist: "Joel L.", albumArt: "https://via.placeholder.com/300x300", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", genre: 'Rock'},
 {id: 3, title: "Everything", artist: "Joel L.", albumArt: "https://via.placeholder.com/300x300", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", genre: 'Pop'},
 {id: 4, title: "BoomBaby", artist: "Joel L.", albumArt: "https://via.placeholder.com/300x300", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", genre: 'Rock'},
-{id: 5, title: "Everything", artist: "Joel L.", albumArt: "https://via.placeholder.com/300x300", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", genre: 'Cyberpunk'},
+{id: 5, title: "Everything", artist: "Joel L.", albumArt: "https://via.placeholder.com/300x300", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", genre: 'CyberPunk'},
 {id: 6, title: "Everything", artist: "Joel L.", albumArt: "https://via.placeholder.com/300x300", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", genre: 'Rock'},
 
 ];
@@ -18,6 +18,7 @@ const musicData = [
 
 const MusicPage = () => {
 
+    const genres= ['Rock', 'CyberPunk', 'Pop']
 
     const [searchTerm, setSearchTerm] = useState('');
     const [genre, setGenre] = useState('');
@@ -45,39 +46,45 @@ const MusicPage = () => {
                         onChange={(event) => setSearchTerm(event.target.value)}
                         className='searchBar'
                         />
-                        <select 
-                        value={genre}
-                        className='genreSelect'
-                        onChange={(event) => setGenre(event.target.value)}
-                        >
-                            <option value=''>All Genres</option>
-                            <option value='Rock'>Rock</option>
-                            <option value='Pop'>Pop</option>
-                            <option value='Cyberpunk'>Cyberpunk</option>
-                        </select>
-                        <ul className='musicListSide'>
-                        {filteredMusic.map(song => (
-                            <li key={song.id}  className='musicItemSide'>
-                                <h3>{song.title}</h3>
-                                <h4>{song.artist}</h4>
-                                <p>{song.genre}</p>
-                            </li>
-                        ))}
-                    </ul>
-                    </div>
-                    <ul className='musicList'>
-                        {filteredMusic.map(song => (
-                            <li key={song.id}  className='musicItem'>
-                                <img src={song.albumArt} alt={song.title} />
-                                <h3>{song.title}</h3>
-                                <h4>{song.artist}</h4>
-                                <p>{song.genre}</p>
-                            </li>
-                        ))}
-                    </ul>
+                        <div className='GenreFilter'>
+                            {genres.map((genre) => ( 
+                                <button
+                                key={genre}
+                                className={`genreButton ${genre === genre ? 'selected' : ''}`}
+                                onClick={() => setGenre(genre)}
+                                >
 
-                    {filteredMusic.length === 0 && <p className="NoSongsText">No songs found</p>}
+                                {genre}
+                                </button>
+                            ))}
+                            <button 
+                                className={`genreButton ${genre === '' ? 'selected' : ''}`}
+                                onClick={() => setGenre('')}
+                            >
+                                All Music
+                            </button>
+                        
+                        </div>
+                        
+                    </div>
+                    <div className='MusicListContentContainer'>
+                        <ul className='musicList'>
+                            {filteredMusic.map(song => (
+                                <li key={song.id}  className='musicItem'>
+                                    <img src={song.albumArt} alt={song.title} />
+                                    <div className='musicItemContent'>
+                                        <h3>{song.title}</h3>
+                                        <h4>{song.artist}</h4>
+                                        <p>{song.genre}</p>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+
+                        {filteredMusic.length === 0 && <p className="NoSongsText">No songs found</p>}
                     
+                    </div>
+                   
                     
 
                 </div>    
