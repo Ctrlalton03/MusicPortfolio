@@ -9,21 +9,35 @@ const HomePage = () => {
             artist: "Jawaezy",
             albumArt: "../Images/Song_1.jpg",
             audioSrc: "../Songs/Inbetweenthingy.wav",
-            description: "Description for Song 1, Welcome to my music page! This is just PlaceHolder Text for now."
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
-            title: "Song 2",
-            artist: "Joel L.",
-            albumArt: "https://via.placeholder.com/300x300",
-            audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-            description: "Description for Song 2"
+            title: "ColorThingy2",
+            artist: "Jawaezy",
+            albumArt: "../Images/Song_2.png",
+            audioSrc : "../Songs/colorthingy2.wav",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
-            title: "Song 3",
-            artist: "Joel L.",
-            albumArt: "https://via.placeholder.com/300x300",
-            audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-            description: "Description for Song 3"
+            title: "encountrerrthingy",
+            artist: "Jawaezy",
+            albumArt: "../Images/Song_3.jpg",
+            audioSrc: "../Songs/encountrerrthingye.wav",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            title: "Epicthingy",
+            artist: "Jawaezy",
+            albumArt: "../Images/Song_4.png",
+            audioSrc: "../Songs/Epicthingy.wav",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            title: "DamnIneedTrillian",
+            artist: "Jawaezy",
+            albumArt: "../Images/song_5.png",
+            audioSrc: "../Songs/DamnIneedTrillian.wav",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
     ];
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
@@ -47,7 +61,7 @@ const HomePage = () => {
     return (
 
         <div className='HomepageContainer'>
-            <h1>Experience Unique Beats and Rhythms by Joel L.</h1>
+            <h1>Composer/Arranger and Music Production Professional</h1>
             <section className='musicContainer'>
                 <div className= {`MusicPlayerContainer ${isDescriptionOpen ? 'shifted' : ''}`}>
                     <MusicPlayerCard

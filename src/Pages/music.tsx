@@ -2,12 +2,12 @@ import '../Css/MusicPage.css';
 import {useState} from 'react';
 
 const musicData = [
-{id: 1, title: "In Between Things", artist: "Joel L.", albumArt: "../Images/Song_1.jpg", genre: 'Rock'},
-{id: 2, title: "Life's Feast", artist: "Joel L.", albumArt: "https://via.placeholder.com/300x300", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", genre: 'Rock'},
-{id: 3, title: "Everything", artist: "Joel L.", albumArt: "https://via.placeholder.com/300x300", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", genre: 'Pop'},
-{id: 4, title: "BoomBaby", artist: "Joel L.", albumArt: "https://via.placeholder.com/300x300", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", genre: 'Rock'},
-{id: 5, title: "Everything", artist: "Joel L.", albumArt: "https://via.placeholder.com/300x300", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", genre: 'CyberPunk'},
-{id: 6, title: "Everything", artist: "Joel L.", albumArt: "https://via.placeholder.com/300x300", audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", genre: 'Rock'},
+{id: 1, title: "In Between Things", artist: "Joel L.", albumArt: "../Images/Song_1.jpg", genre: 'Rock', Year: '2024'},
+{id: 2, title: "colorthingy2", artist: "Joel L.", albumArt: "../Images/Song_2.png", genre: 'other', Year: '2024'},
+{id: 3, title: "encountrerrthingye", artist: "Joel L.", albumArt: "../Images/Song_3.jpg", genre: 'Vgm', Year: '2024'},
+{id: 4, title: "Epicthingy", artist: "Joel L.", albumArt: "../Images/Song_4.png", genre: 'Orchestral', Year: '2024'},
+{id: 5, title: "DamnIneedTrillian", artist: "Joel L.", albumArt: "../Images/song_5.png", genre: 'Jazz', Year: '2024'},
+{id: 6, title: "Everything", artist: "Joel L.", albumArt: "https://via.placeholder.com/300x300", genre: 'Rock', Year: '2024'},
 
 ];
 
@@ -29,16 +29,12 @@ const MusicPage = () => {
 
     return (
         <div>
-            <header>
-                <h1>My Music List</h1>
-            </header>
+            
             <main>
-                <h2>
-                    Music Library    
-                </h2>
                 < div className='Container'>
                     
                     <div className='SearchbarContainer'>
+                        <h3>Filters</h3>
                         <input 
                         type='text'
                         placeholder='Search for a song'
@@ -47,6 +43,14 @@ const MusicPage = () => {
                         className='searchBar'
                         />
                         <div className='GenreFilter'>
+
+                            <button 
+                                className={`genreButton ${genre === '' ? 'selected' : ''}`}
+                                onClick={() => setGenre('')}
+                            >
+                                All Music
+                            </button>
+
                             {genres.map((genre) => ( 
                                 <button
                                 key={genre}
@@ -57,25 +61,20 @@ const MusicPage = () => {
                                 {genre}
                                 </button>
                             ))}
-                            <button 
-                                className={`genreButton ${genre === '' ? 'selected' : ''}`}
-                                onClick={() => setGenre('')}
-                            >
-                                All Music
-                            </button>
+                            
                         
                         </div>
                         
                     </div>
                     <div className='MusicListContentContainer'>
+                        <h1>MUSIC HEADER</h1>
                         <ul className='musicList'>
                             {filteredMusic.map(song => (
                                 <li key={song.id}  className='musicItem'>
                                     <img src={song.albumArt} alt={song.title} />
                                     <div className='musicItemContent'>
                                         <h3>{song.title}</h3>
-                                        <h4>{song.artist}</h4>
-                                        <p>{song.genre}</p>
+                                        <p>{song.Year}</p>
                                     </div>
                                 </li>
                             ))}

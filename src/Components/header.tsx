@@ -12,11 +12,6 @@ const Header = () => {
   return (
     <header className='Header-container'>
       <nav>
-        <div className="logo">
-          <Link to="/">
-            <img src="/Images/HomeButton.jpg" alt="Home" />
-          </Link>
-        </div>
         <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
           <span className="line"></span>
           <span className="line"></span>
@@ -25,7 +20,12 @@ const Header = () => {
         <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
           <li><Link to="/music" onClick={toggleMenu}>Music</Link></li>
           <li><Link to="/news" onClick={toggleMenu}>News/Events</Link></li>
-          <li><Link to="/AboutMe" onClick={toggleMenu}>About Me</Link></li>
+          <div className="logo">
+            <Link to="/">
+              <img src="/Images/HomeButton.jpg" alt="Home" />
+            </Link>
+          </div>
+          <li><Link to="/AboutMe" onClick={toggleMenu}>About</Link></li>
           <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
         </ul>
       </nav>
