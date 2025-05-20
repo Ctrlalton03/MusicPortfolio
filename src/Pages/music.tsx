@@ -1,5 +1,6 @@
 import '../Css/MusicPage.css';
 import {useState} from 'react';
+import SoundcloudPlayer from '../Components/SoundcloudPlayer';
 
 const musicData = [
 {id: 1, title: "In Between Things", artist: "Joel L.", albumArt: "../Images/Song_1.jpg", genre: 'Rock', Year: '2024'},
@@ -16,7 +17,10 @@ const musicData = [
 
 
 
+
 const MusicPage = () => {
+    
+
 
     const genres= ['Rock', 'CyberPunk', 'Pop']
 
@@ -86,7 +90,14 @@ const MusicPage = () => {
                    
                     
 
-                </div>    
+                </div> 
+                <div className='Playlist-Container'>
+                   <SoundcloudPlayer playlistUrl={'api.soundcloud.com/playlists/1984423180%3Fsecret_token%3Ds-QXqfDQYu6Ix'} Label={`Battle Theme`}/>
+                   <SoundcloudPlayer playlistUrl={'api.soundcloud.com/playlists/1984421960%3Fsecret_token%3Ds-WjF1FejxzlG'} Label={`Retro`}/>
+                   <SoundcloudPlayer playlistUrl={'api.soundcloud.com/playlists/1984421308%3Fsecret_token%3Ds-HZ99sisrLTY'} Label={`Ambient Tracks`}/>
+                   <SoundcloudPlayer playlistUrl={'api.soundcloud.com/playlists/2019467379%3Fsecret_token%3Ds-e7Foi5QoqmW'} Label={`Orchestral & Classical`}/>
+                   <SoundcloudPlayer playlistUrl={'api.soundcloud.com/playlists/1984344572%3Fsecret_token%3Ds-BoslJCZzz97'} Label={`Jazz & Blues`}/>
+                </div>   
             </main>            
         </div>
     );
