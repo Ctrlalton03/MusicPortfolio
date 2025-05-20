@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #171717;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.HomepageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.HomepageContainer h1{
+    font-family: 'Oswald', serif;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.musicContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.MusicPlayerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px ;
+    transition: transform 1.3s ease-in-out;
+    
+}
+
+
+.MusicPlayerCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.DescriptionPreview{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    color: rgb(0, 0, 0);
+}
+
+.Content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.description_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s ease;
+    width: 100vw;
+    opacity: 1;
+    width: 100%;
+    margin: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.7s ease-in-out, opacity 1.3s ease-in-out;
+}
+
+.description_container.open {
+    opacity: 1;
+}
+
+
+.DescriptionPreview{
+    height: 100%;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    white-space: normal;
+    margin: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    color: rgb(0, 0, 0);
+    animation: smooth-appear 1s ease forwards;
+}
+
+@keyframes smooth-appear {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media screen and (min-width: 1024px){
+    
+
+    .musicContainer{
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .MusicPlayerContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 20px ;
+    }
+    .MusicPlayerContainer.shifted {
+        transform: translateX(0px); /* Adjust this value based on your layout */
+    }
+
+    .description_container{
+        width: 0%;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "Playfair Display", serif;
+        color: rgb(0, 0, 0);
+    }
+
+    .description_container .DescriptionPreview {
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 1;
+    }
+    
+    .description_container.open {
+        width: 100%; /* Or adjust based on your needs */
+        opacity: 1;
+    }
+
+    .DescriptionPreview{
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "Playfair Display", serif;
+        color: rgb(0, 0, 0);
+        animation: smooth-appear 1s ease forwards;
+    }
+
+    @keyframes smooth-appear {
+        from {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+}
