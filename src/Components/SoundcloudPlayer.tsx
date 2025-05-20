@@ -1,10 +1,8 @@
 import '../Css/MusicPlaylist.css'
 
-interface SoundcloudPlayerProps {
-    playlistUrl: string;
-}
 
-const SoundcloudPlayer: React.FC<SoundcloudPlayerProps> = ({playlistUrl}) => {
+
+const SoundcloudPlayer = ({ playlistUrl }: { playlistUrl: string }) => {
 
     const encodedUrl = encodeURIComponent(playlistUrl);
 
