@@ -1,6 +1,8 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import MusicPlayerCard from '../Components/MusicCard';
 import '../Css/home.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HomePage = () => {
     const songs = [
@@ -58,9 +60,15 @@ const HomePage = () => {
         setIsDescriptionOpen(prev => !prev);
     }
 
+
+    useEffect(() => {
+        AOS.init({duration: 1000, once: true});
+    }, []);
+
+
     return (
 
-        <div className='HomepageContainer'>
+        <div className='HomepageContainer' data-aos="fade-up">
             <h1>Composer/Arranger and Music Production Professional</h1>
             <section className='musicContainer'>
                 <div className= {`MusicPlayerContainer ${isDescriptionOpen ? 'shifted' : ''}`}>

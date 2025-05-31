@@ -25,7 +25,6 @@ const AboutMe = () => {
             <div className="ContainerSecondSection">
                 <h1 className='VisionHeader'>My <br />Vision</h1>
                 <div className="VisionCard">
-                    <h1>My Vision</h1>
                     <p>
                     While I’m still growing my portfolio, my passion for creating music and 
                     sound is endless. Each project, no matter how big or small, is an opportunity 

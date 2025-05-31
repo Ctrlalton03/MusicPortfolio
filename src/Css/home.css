@@ -19,12 +19,13 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 15px;
     height: 100%;
 }
 
 .HomepageContainer h1{
     font-family: 'Oswald', serif;
-    font-size: 3rem;
+    font-size: 2rem;
     color: rgb(255, 255, 255);
     margin-top: 2rem;
     text-align: center;
@@ -156,7 +157,7 @@ body{
         padding: 20px ;
     }
     .MusicPlayerContainer.shifted {
-        transform: translateX(0px); /* Adjust this value based on your layout */
+        transform: translateX(0px); 
     }
 
     .description_container{
@@ -181,7 +182,7 @@ body{
     }
     
     .description_container.open {
-        width: 100%; /* Or adjust based on your needs */
+        width: 100%; 
         opacity: 1;
     }
 
