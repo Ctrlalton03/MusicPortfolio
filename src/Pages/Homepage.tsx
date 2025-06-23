@@ -43,6 +43,7 @@ const HomePage = () => {
         }
     ];
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
+    
     const handleNext = () => {
         setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length); // Loop back to the first song after the last
     };
@@ -69,30 +70,8 @@ const HomePage = () => {
     return (
 
         <div className='HomepageContainer' data-aos="fade-up">
-            <h1>Composer/Arranger and Music Production Professional</h1>
+            <h1>VGM Composer / Producer</h1>
             <section className='musicContainer'>
-                <div className= {`MusicPlayerContainer ${isDescriptionOpen ? 'shifted' : ''}`}>
-                    <MusicPlayerCard
-                        title={currentSong.title}
-                        artist={currentSong.artist}
-                        albumArt={currentSong.albumArt}
-                        audioSrc={currentSong.audioSrc}
-                        description={currentSong.description}
-                        showDescription={isDescriptionOpen}
-                        onToggleDescription={handleDescriptionToggle}
-                        onNext={handleNext}
-                        onPrev={handlePrev}
-                    />
-                </div>
-
-                <div className={`description_container ${isDescriptionOpen ? 'open' : ''}`}>
-                    {isDescriptionOpen && (
-                        <div className="DescriptionPreview">
-                            <h2 className="text-lg font-bold">{currentSong.title}</h2>
-                            <p>{currentSong.description}</p>
-                        </div>
-                    )}
-                </div>
                 
             </section>
         </div>

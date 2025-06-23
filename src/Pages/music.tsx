@@ -11,11 +11,22 @@ import "aos/dist/aos.css";
 const MusicPage = () => {
     
     const playlist = [
+        'api.soundcloud.com/playlists/1984421308%3Fsecret_token%3Ds-HZ99sisrLTY',
+        'api.soundcloud.com/playlists/1984423800%3Fsecret_token%3Ds-hFevC7sJXbU',
         'api.soundcloud.com/playlists/1984423180%3Fsecret_token%3Ds-QXqfDQYu6Ix',
         'api.soundcloud.com/playlists/1984421960%3Fsecret_token%3Ds-WjF1FejxzlG',
-        'api.soundcloud.com/playlists/1984421308%3Fsecret_token%3Ds-HZ99sisrLTY',
         'api.soundcloud.com/playlists/2019467379%3Fsecret_token%3Ds-e7Foi5QoqmW',
         'api.soundcloud.com/playlists/1984344572%3Fsecret_token%3Ds-BoslJCZzz97'
+    ]
+
+
+    const playlistNames = [
+        'Ambient / Background Tracks',
+        'Orchestral / Classical / Cinematic Tracks',
+        'Battle / Encotunter VGM Tracks',
+        'Retro / 8-bit / 16-bit Style Tracks',
+        'jazz / Blues / Etc. Tracks',
+        'VGM Mashups / Recreations Tracks'
     ]
 
     useEffect(() => {
@@ -28,10 +39,10 @@ const MusicPage = () => {
             <main>
                 < div className='Container' data-aos="fade-up">      
                 <div className='playlist-mapping-container'>
-                    <h1>Playlist Section</h1>
+                    <h1>Discography</h1>
                     {playlist.map((url, index) => (
                         <div key={index}>
-                            <h2>Playlist: {index +1}</h2>
+                            <h2>{playlistNames[index]}</h2>
                             <SoundcloudPlayer key={index} playlistUrl={url} />
                         </div>
                     ))}

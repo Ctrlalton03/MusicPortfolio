@@ -127,7 +127,11 @@
 
 @media screen and (min-width: 768px){
     .ContactPageContainer{
-        border: 1px solid red;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
     }
     .ContactForm{
         width: 50%;

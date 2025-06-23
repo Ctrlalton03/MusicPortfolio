@@ -1,0 +1,25 @@
+.NewsContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.NewsContainer h1{
+    font-family: 'Oswald', serif;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.NewsContainer p{
+    font-family: 'Oswald', serif;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
