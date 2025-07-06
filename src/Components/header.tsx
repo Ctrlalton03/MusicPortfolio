@@ -19,7 +19,7 @@ const Header = () => {
         </div>
         <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
           <li><Link to="/music" onClick={toggleMenu}>Music</Link></li>
-          <li><Link to="/news" onClick={toggleMenu}>News/Events</Link></li>
+          <li><Link to="/news" onClick={toggleMenu}>News</Link></li>
           <div className="logo">
             <Link to="/">
               <img src="/Images/HomeButton.jpg" alt="Home" />

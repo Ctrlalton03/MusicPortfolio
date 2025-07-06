@@ -23,10 +23,10 @@ const MusicPage = () => {
     const playlistNames = [
         'Ambient / Background Tracks',
         'Orchestral / Classical / Cinematic Tracks',
-        'Battle / Encotunter VGM Tracks',
+        'Battle / Encounter VGM Tracks',
         'Retro / 8-bit / 16-bit Style Tracks',
-        'jazz / Blues / Etc. Tracks',
-        'VGM Mashups / Recreations Tracks'
+        'Jazz / Blues / Etc. Tracks',
+        'VGM Mashups / Recreated Tracks'
     ]
 
     useEffect(() => {
