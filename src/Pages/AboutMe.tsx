@@ -1,4 +1,5 @@
 import '../Css/AboutPage.css';
+import { Link } from 'react-router-dom';
 
 
 const AboutMe = () => {
@@ -7,17 +8,20 @@ const AboutMe = () => {
             <div className="introductionContainer">
                 <h1>About Me</h1>
                 <div className="IntroContent">
-                    <div className="imageContainer">
-                        <p>Pic</p>
-                    </div>
                     <p>
-                        Hey, I'm Jaweazy – a passionate musician, producer/composer, 
-                        and sound designer with years of experience crafting immersive 
-                        soundscapes. My love for audio spans across various genres, 
-                        and my work has been featured in video games, films, and more. 
-                        Whether it's creating a unique track, designing sounds that tell 
-                        a story, or composing music for different media, I'm all about 
-                        pushing boundaries and experimenting with new ideas.
+                        Hello! I'm Jaweazy: a professional composer, producer, and sound designer. I create music and
+                        sound effects for games, film, and other media, bringing stories to life through audio.
+                    </p>
+                    <p>
+                        I've been making music in some form for over a decade. I began with band and choir, and
+                        eventually found myself performing, teaching, and producing in more professional spaces. Along
+                        the way, I began making original tracks, remixes, and SFX for various projects. I honed my skills
+                        across several styles and genres, including 8/16-bit music, orchestral, jazz, rock, hip hop, and more
+                        while contributing to indie games, short films, videos, and personal commissions.
+                    </p>
+                    <p>
+                        I'm constantly looking to refine my craft and master everything I come across. Whether you need
+                        an 8-bit loop, a cinematic orchestra, or ambient sounds, feel free to <a><Link to="/contact">contact me!</Link></a> 
                     </p>
                 </div>
                
