@@ -70,7 +70,7 @@ const AboutMe = () => {
                 <h1>About Me</h1>
                 <div className="IntroContent">
                     <p>
-                        Hello! I'm Jaweazy: a professional composer, producer, and sound designer. I create music and
+                        <a className='textcolor'>Hello! I'm Jaweazy: a professional composer, producer, and sound designer.</a> I create music and
                         sound effects for games, film, and other media, bringing stories to life through audio.
                     </p>
                     <br />
