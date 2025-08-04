@@ -18,7 +18,7 @@
 .playlist-mapping-container h1{
     color: white;
     font-family: 'Oswald', serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
@@ -47,7 +47,7 @@
     
 header h1{
     font-family: 'Oswald', serif;
-    font-size: 3rem;
+    font-size: 2em;
     color: rgb(255, 255, 255);
     margin-top: 1rem;
     padding-left: 1rem;
@@ -58,14 +58,14 @@ header h1{
 .playlist-mapping-container h1{
     color: white;
     font-family: 'Oswald', serif;
-    font-size: 5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
 .playlist-mapping-container h2{
     color: white;
     font-family: 'Oswald', serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 

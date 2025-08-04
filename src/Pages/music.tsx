@@ -42,7 +42,7 @@ const MusicPage = () => {
                     <h1>Discography</h1>
                     {playlist.map((url, index) => (
                         <div key={index}>
-                            <h2>{playlistNames[index]}</h2>
+                            <h1>{playlistNames[index]}</h1>
                             <SoundcloudPlayer key={index} playlistUrl={url} />
                         </div>
                     ))}

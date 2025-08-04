@@ -26,18 +26,30 @@ body{
 .HomepageContainer h1{
     font-family: 'Oswald', serif;
     font-size: 2rem;
-    color: rgb(255, 255, 255);
-    margin-top: 2rem;
+    color: rgb(0, 0, 0);
     text-align: center;
 }
+
+.HomepageContainer h2{
+    font-family: 'Oswald', serif;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
 
 .musicContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 300px;
+    margin-top: 40px;
+    background-color: white;
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 40px;
 }
 
 .MusicPlayerContainer{
@@ -143,8 +155,9 @@ body{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 300px;
+        
     }
 
     .MusicPlayerContainer{
