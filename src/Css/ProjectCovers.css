@@ -194,6 +194,11 @@
 }
 
 .description-container p {
+    font-size: 1rem;
     margin: 10px 0;
 }
     
+.description-container p b{
+    font-size: 1rem;
+    margin: 10px 0;
+}
