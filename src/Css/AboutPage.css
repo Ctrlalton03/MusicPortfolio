@@ -40,9 +40,9 @@
 }
 
 .IntroContent p a{
-    color: #ffffff;
-    text-decoration: underline;
-    font-size: 1.2rem;
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 
 
@@ -98,6 +98,11 @@
     align-items: center;
 }
 
+.TextLink {
+    font-size: 1.2rem;
+    color: #007BFF;
+    text-decoration: none;
+}
 
 @media screen and (min-width: 768px){
     .introductionContainer{
@@ -119,9 +124,9 @@
         margin: 10px;
         margin: 0;
         text-align: center;
-        max-width: 80%;
+        max-width: 50%;
         font-family: 'Oswald', sans-serif;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: 400;
         color: #ffffff;
     }

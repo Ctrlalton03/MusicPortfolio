@@ -5,8 +5,8 @@ type Project = {
     id: number;
     title: string;
     image: string;
-    description1?: string;
-    description2?: string;
+    description1?: string | JSX.Element;
+    description2?: string | JSX.Element;
     link?: string; 
 };
 
@@ -62,7 +62,7 @@ const ProjectCovers = ({projects} : ProjectCoversProps) => {
 
             {showDescription && (
                 <div className="description-container">
-                    <h3>{currentProject.description1}</h3>
+                    <p>{currentProject.description1}</p>
                     <p>{currentProject.description2}</p>
                 </div>
             )}
