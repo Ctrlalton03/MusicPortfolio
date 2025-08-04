@@ -39,9 +39,9 @@ const MusicPage = () => {
             <main>
                 < div className='Container' data-aos="fade-up">      
                 <div className='playlist-mapping-container'>
-                    <h1>Discography</h1>
+                    <h1 className='TitleMapping'>Discography</h1>
                     {playlist.map((url, index) => (
-                        <div key={index}>
+                        <div key={index} className='playlist-mapping'>
                             <h1>{playlistNames[index]}</h1>
                             <SoundcloudPlayer key={index} playlistUrl={url} />
                         </div>
