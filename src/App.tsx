@@ -6,6 +6,7 @@ import News from './Pages/news';
 import AboutMe from './Pages/AboutMe';
 import ContactPage from './Pages/contact';
 import MusicPage from './Pages/music';
+import Footer from './Components/Footer';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />   
           <Route path="/music" element={<MusicPage />} /> 
         </Routes>
+        <Footer />
       </Router>
       
     </>

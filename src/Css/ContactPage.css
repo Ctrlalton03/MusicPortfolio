@@ -74,7 +74,7 @@
 
 
 .ContactFormInput label{
-    width: 10%;
+    width: 20%;
     
     font-family: 'Oswald', serif;
     font-size: 1.2rem;
@@ -95,7 +95,7 @@
 
 
 .ContactFormInput_Message label{
-    width: 10%;
+    width: 20%;
     font-family: 'Oswald', serif;
     font-size: 1.2rem;
     color: rgb(0, 0, 0);
@@ -135,7 +135,7 @@
         margin: 0;
     }
     .ContactForm{
-        width: 50%;
+        width: 60%;
     }
     .ContactFormInput_Message textarea{
         width: 100%;
