@@ -3,9 +3,9 @@ import emailjs from '@emailjs/browser';
 import React, { useState, useRef } from 'react';
 
 interface ContactFormData {
-    name: string;
+    Firstname: string;
+    Lastname: string;
     email: string;
-    phone?: string;
     subject: string;
     message: string;
 }
@@ -14,9 +14,9 @@ const ContactPage: React.FC = () => {
     const formRef = useRef<HTMLFormElement>(null);
 
     const [formData, setFormData] = useState<ContactFormData>({
-        name: '',
+        Firstname: '',
+        Lastname: '',
         email: '',
-        phone: '',
         subject: '',
         message: ''
     })
@@ -42,9 +42,9 @@ const ContactPage: React.FC = () => {
                 'service_i7n3fy8',
                 'template_xjt87im',
                 {
-                  from_name: formData.name,
+                  from_name: formData.Firstname,
+                  from_surname: formData.Lastname,
                   from_email: formData.email,
-                  phone: formData.phone,
                   subject: formData.subject,
                   message: formData.message,
                 },
@@ -53,7 +53,7 @@ const ContactPage: React.FC = () => {
               
               console.log('Email sent successfully:', result.text);
               setSubmitStatus('success');
-              setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+              setFormData({ Firstname: '', Lastname:'', email: '', subject: '', message: '' });
             } catch (error) {
               console.error('Failed to send email:', error);
               setSubmitStatus('error');
@@ -75,17 +75,27 @@ const ContactPage: React.FC = () => {
             <form className="ContactForm" ref={formRef} onSubmit={handleSubmit}>
                 <div className='ContactforminsideContainer'>
                     <div className='ContactFormInput'>
-                        <label htmlFor="name">Name:</label>
+                        <label htmlFor="name">First Name:</label>
                         <input 
                             type="text" 
-                            id="name" 
-                            name="name" 
-                            value={formData.name}
+                            id="Firstname" 
+                            name="Firstname" 
+                            value={formData.Firstname}
                             onChange={handleChange}
-                            placeholder='Full Name' required/>
+                            placeholder='First Name' required/>
                     </div>
                     <div className='ContactFormInput'>
-                        <label htmlFor="email">Email:</label>
+                        <label htmlFor="email">Last Name:</label>
+                        <input 
+                            type="text" 
+                            id="Lastname" 
+                            name="Lastname" 
+                            value={formData.Lastname}
+                            onChange={handleChange}
+                            placeholder='Last Name or Business Name' required/>
+                    </div>
+                    <div className='ContactFormInput'>
+                        <label htmlFor="phone">Email:</label>
                         <input 
                             type="email" 
                             id="email" 
@@ -93,17 +103,6 @@ const ContactPage: React.FC = () => {
                             value={formData.email}
                             onChange={handleChange}
                             placeholder='Email Address' required/>
-                    </div>
-                    <div className='ContactFormInput'>
-                        <label htmlFor="phone">Phone:</label>
-                        <input 
-                            type="tel" 
-                            id="phone" 
-                            name="phone" 
-                            value={formData.phone}
-                            onChange={handleChange}
-                            placeholder="Phone Number"
-                        />
                     </div>
                     <div className='ContactFormInput'>
                         <label htmlFor="email">Subject:</label>
@@ -141,19 +140,18 @@ const ContactPage: React.FC = () => {
                 }`}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
-
-              {submitStatus === 'success' && (
+                {submitStatus === 'success' && (
           <div className="p-3 bg-green-100 border border-green-400 text-green-700 rounded">
             Message sent successfully!
           </div>
         )}
 
-        {submitStatus === 'error' && (
-          <div className="p-3 bg-red-100 border border-red-400 text-red-700 rounded">
-            Failed to send message. Please try again.
-          </div>
-        )}
+                {submitStatus === 'error' && (
+                          <div className="p-3 bg-red-100 border border-red-400 text-red-700 rounded">
+                            Failed to send message. Please try again.
+                          </div>
+                        )}
+              </button>
       
             </form>
             </div>
