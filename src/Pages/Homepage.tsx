@@ -14,7 +14,7 @@ const HomePage = () => {
     return (
 
         <div className='HomepageContainer' data-aos="fade-up">
-            <h2>Composer * Producer * Sound Designer </h2>
+            <h2>VGM Composer/Producer </h2>
             <div className='musicContainer'>
             <h1>Thanks for stopping by! This site is being frequently updated with new content. In the meantime, please feel free to explore the other pages to check out my work!</h1>
 

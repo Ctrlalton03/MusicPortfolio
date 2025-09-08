@@ -18,19 +18,15 @@ const Header = () => {
           <span className="line"></span>
         </div>
         <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
-          <div className="nav-left">
-            <li><Link to="/music" onClick={toggleMenu}>Music</Link></li>
-            <li><Link to="/news" onClick={toggleMenu}>News</Link></li>
-          </div>
+          <li><Link to="/music" onClick={toggleMenu}>Music</Link></li>
+          <li><Link to="/news" onClick={toggleMenu}>News</Link></li>
           <div className="logo">
             <Link to="/">
               <img src="/Images/HomeButton.jpg" alt="Home" />
             </Link>
           </div>
-          <div className="nav-right">
-            <li><Link to="/AboutMe" onClick={toggleMenu}>About</Link></li>
-            <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
-          </div>
+          <li><Link to="/AboutMe" onClick={toggleMenu}>About</Link></li>
+          <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
         </ul>
       </nav>
     </header>

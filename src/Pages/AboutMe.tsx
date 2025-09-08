@@ -75,11 +75,11 @@ const AboutMe = () => {
                     </p>
                     <br />
                     <p>
-                        I've been making music in for over a decade. I began with live ensembles and choirs, and
-                        eventually producing and composing. Since then, I’ve created original tracks, remixes, and
-                        sound effects across a variety of projects. My style spans retro 8/16-bit game music,
-                        orchestral, jazz, rock, hip hop, and more, with work featured in indie games, short films,
-                        videos, and personal commissions.                    
+                        I've been making music in some form for over a decade. I began with band and choir, and
+                        eventually found myself performing, teaching, and producing in more professional spaces. Along
+                        the way, I began making original tracks, remixes, and SFX for various projects. I honed my skills
+                        across several styles and genres, including 8/16-bit music, orchestral, jazz, rock, hip hop, and more
+                        while contributing to indie games, short films, videos, and personal commissions.
                     </p>
                     <br />
                     <p>
