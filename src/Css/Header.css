@@ -22,6 +22,7 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 8vh;
 }
 
 
@@ -76,6 +77,8 @@ a:hover {
 }
   
 @media (max-width: 768px) {
+    
+
     .nav-links {
       display: none;
       position: absolute;
@@ -100,6 +103,17 @@ a:hover {
     li {
       margin: 10px 0;
     }
+}
+
+@media screen and (min-width: 769px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 15vh;
+    }
+    
 }
   
 .hamburger.open .line:nth-child(1) {

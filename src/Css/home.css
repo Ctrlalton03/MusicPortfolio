@@ -44,7 +44,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 80%;
-    height: 300px;
+    height: 100%;
     margin-top: 40px;
     background-color: white;
     border: 1px solid white;
@@ -132,6 +132,14 @@ body{
     font-family: "Playfair Display", serif;
     color: rgb(0, 0, 0);
     animation: smooth-appear 1s ease forwards;
+}
+
+.homepageVideo{
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    transition: transform 0.3s ease;
 }
 
 @keyframes smooth-appear {
