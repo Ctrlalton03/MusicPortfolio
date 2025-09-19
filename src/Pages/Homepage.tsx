@@ -2,7 +2,7 @@ import {useEffect} from 'react';
 import '../Css/home.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import HomePageVideo from '../assets/Jaweazy Demo Reel.mp4';
+import HomePageVideo from '../assets/Jaweazy-Demo-Reel.mp4';
 
 const HomePage = () => {
 
