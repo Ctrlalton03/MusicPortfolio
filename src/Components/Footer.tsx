@@ -1,8 +1,8 @@
 import Discord from '../assets/Discord.png';
 import Fiverr from '../assets/Fiverr.png';
-import Soundcloud from '../assets/Soundcloud.png';
+import Soundcloud from '../assets/SoundCloud.png';
 import Spotify from '../assets/Spotify.png';
-import Youtube from '../assets/Youtube.png';
+import Youtube from '../assets/YouTube.png';
 import '../Css/Footer.css';
 
 const Footer = () => {
